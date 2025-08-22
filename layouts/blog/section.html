@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ range page.Sections }}
+    <div class="card-section">
+        <p>blog section {{ .LinkTitle }}</p>
+        <ul>
+        {{ range .RegularPages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>    
+        {{ end }}
+        </ul>
+    </div>
+{{ end }}
+
+<div class="card-section">
+    <p>All</p>
+    <ul>
+    {{ range .RegularPagesRecursive }}
+        <li>{{ .Title }}</li>    
+    {{ end }}
+    </ul>
+</div>
+
+{{ end }}

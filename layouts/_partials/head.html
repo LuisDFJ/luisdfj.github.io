@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+        <li><a href='{{ absURL "/" }}'>Home</a></li>
+        {{ range site.Sections }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+        <li><a href='{{ absURL "about" }}'>About</a></li>
+    </ul>
+</nav>
