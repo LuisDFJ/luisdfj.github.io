@@ -1,9 +1,11 @@
-<nav>
-    <ul>
-        <li><a href='{{ absURL "/" }}'>Home</a></li>
-        {{ range site.Sections }}
-        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-        {{ end }}
-        <li><a href='{{ absURL "about" }}'>About</a></li>
-    </ul>
-</nav>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{ print "TestPage" }}</title>
+{{ with resources.Get "sass/main.sass" | toCSS }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{ end }}
+{{ with resources.Get "ts/main.ts" | babel }}
+    {{ with slice . | resources.Concat "/scripts/main.js" }}
+        <script src='{{ .RelPermalink }}' defer></script>
+    {{ end }}
+{{ end }}

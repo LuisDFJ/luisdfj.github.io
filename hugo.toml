@@ -8,3 +8,7 @@ title = 'LDFJ Personal Blog'
         mail = 'luis@mail.com'
         github = 'https://github.com/LuisDFJ'
         linkedin = 'https://linkedin.com'
+
+[security]
+    [security.exec]
+        allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$', '^babel$']
