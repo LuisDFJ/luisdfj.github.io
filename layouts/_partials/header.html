@@ -1,11 +1,22 @@
 <nav>
-    <div class="logo">Site</div>
+    <div class="logo">
+        <i class="fa-solid fa-circle-notch"></i>
+        <a href='{{ absURL "/" }}'>Luis Fuentes</a>
+    </div>
     <ul class="nav-links" id="nav-links">
-        <li><a href='{{ absURL "/" }}'>Home</a></li>
         {{ range site.Sections }}
-        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </li>
         {{ end }}
-        <li><a href='{{ absURL "about" }}'>About</a></li>
+        <li>
+            <a href='{{ absURL "about" }}'>About Me</a>
+        </li>
+    </ul>
+    <ul class="nav-extras">
+        <li>
+            <a href="#">Resume</a>
+        </li>
     </ul>
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 </nav>

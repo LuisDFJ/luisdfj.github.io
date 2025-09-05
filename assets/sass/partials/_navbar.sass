@@ -1,6 +1,13 @@
-$nav-background: #111
-$nav-color: #AAA
-$nav-color-hover: #CCC
+@import "color-palette"
+
+$nav-color: $color
+$nav-background: $background
+$nav-color-hover: $color-hover
+$nav-logo-color-hover: $accent-color
+$nav-button-color: $accent-color
+$nav-button-background: $accent-background
+$nav-button-color-hover: $focus-color
+$nav-button-background-hover: $focus-background
 
 nav
   color: $nav-color
@@ -13,6 +20,18 @@ nav
   .logo
     font-size: 1.5rem
     font-weight: bold
+    display: inline-block
+    a
+      text-decoration: none
+      color: $nav-color
+    i
+      font-size: 0.9rem
+  .logo:hover
+    a
+      color: $nav-color-hover
+    i
+      color: $nav-logo-color-hover
+      transform: rotate(90deg)
   .menu-toggle
     display: none
     font-size: 1.5rem
@@ -26,11 +45,27 @@ nav
         color: $nav-color
         text-decoration: none
         font-size: 1rem
-        transition: color 0.3s
-        transition: font-weight 0.3s
       a:hover
         color: $nav-color-hover
         font-weight: bold
+  .nav-extras
+    list-style: none
+    display: flex
+    gap: 2rem
+    li
+      a
+        color: $nav-button-color
+        font-weight: bold
+        text-decoration: none
+        font-size: 1rem
+        padding: 0.3rem 0.4rem
+        background-color: $nav-button-background
+        border-width: 0.15rem
+        border-radius: 0.8rem
+      a:hover
+        color: $nav-button-color-hover
+        background-color: $nav-button-background-hover
+
   @media (max-width: 768px)
     .nav-links
       flex-direction: column

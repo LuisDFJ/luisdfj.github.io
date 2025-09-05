@@ -8,6 +8,7 @@ title = 'LDFJ Personal Blog'
         mail = 'luis@mail.com'
         github = 'https://github.com/LuisDFJ'
         linkedin = 'https://linkedin.com'
+        youtube = 'https://youtube.com'
 
 [security]
     [security.exec]

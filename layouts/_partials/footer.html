@@ -1,9 +1,22 @@
 <div class="footer">
-    <p>By <a href='{{ absURL "." }}'>{{ site.Params.Author.Name }}</a></p>
-    <div class="social-media">
-        <a class="icon" href="{{ site.Params.Author.Github }}">GitHub</a>
-        <a class="icon" href="{{ site.Params.Author.Linkedin }}">LinkedIn</a>
-    </div>
+    <p>By <em>{{ site.Params.Author.Name }}</em></p>
+    <ul class="social-media">
+        <li>
+            <a href="{{ site.Params.Author.Github }}" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </li>
+        <li>
+            <a href="{{ site.Params.Author.Linkedin }}" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a href="{{ site.Params.Author.Youtube }}" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </li>
+    </ul>
     <p>Copyright {{ now.Year }}. All rights reserved.</p>
 </div>
 
