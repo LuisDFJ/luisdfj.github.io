@@ -1,8 +1,6 @@
-@import "color-palette"
-
-$footer-color: $color
-$footer-background: $background
-$github-color: black
+$footer-color: var(--color)
+$footer-background: var(--background)
+$github-color: white
 $linkedin-color: blue
 $youtube-color: red
 
@@ -31,3 +29,5 @@ $youtube-color: red
           color: $linkedin-color
         .fa-youtube
           color: $youtube-color
+
+@import "theme-toggle"

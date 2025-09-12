@@ -1,19 +1,34 @@
-@import "partials/navbar"
-@import "partials/footer"
-
 $time: 0.3s ease
 
 *
   margin: 0
   padding: 0
   box-sizing: border-box
-  transition: color $time, background-color $time, transform $time, font-weight $time
+  transition: color $time, background-color $time, transform $time, text-shadow $time
 
 body
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+body.dark
+  --color: #AAA
+  --background: #111
+  --color-hover: white
+  --accent-color: red
+  --accent-background: blue
+  --focus-color: blue
+  --focus-background: red
+body.light
+  --color: #111
+  --background: #AAA
+  --color-hover: black
+  --accent-color: blue
+  --accent-background: red
+  --focus-color: red
+  --focus-background: blue
+
 
 i
   vertical-align: middle
   line-height: 1
 
-
+@import "partials/navbar"
+@import "partials/footer"

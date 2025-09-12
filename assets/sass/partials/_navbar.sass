@@ -1,13 +1,11 @@
-@import "color-palette"
-
-$nav-color: $color
-$nav-background: $background
-$nav-color-hover: $color-hover
-$nav-logo-color-hover: $accent-color
-$nav-button-color: $accent-color
-$nav-button-background: $accent-background
-$nav-button-color-hover: $focus-color
-$nav-button-background-hover: $focus-background
+$nav-color: var(--color)
+$nav-background: var(--background)
+$nav-color-hover: var(--color-hover)
+$nav-logo-color-hover: var(--accent-color)
+$nav-button-color: var(--accent-color)
+$nav-button-background: var(--accent-background)
+$nav-button-color-hover: var(--focus-color)
+$nav-button-background-hover: var(--focus-background)
 
 nav
   color: $nav-color
@@ -47,7 +45,7 @@ nav
         font-size: 1rem
       a:hover
         color: $nav-color-hover
-        font-weight: bold
+        text-shadow: 0 0 1px $nav-color-hover
   .nav-extras
     list-style: none
     display: flex

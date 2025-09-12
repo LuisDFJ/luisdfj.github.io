@@ -2,6 +2,8 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'LDFJ Personal Blog'
 
+disableKinds = ['taxonomy', 'term']
+
 [params]
     [params.author]
         name = 'Luis David Fuentes Juvera'
