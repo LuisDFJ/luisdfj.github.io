@@ -1,22 +1,36 @@
 {{ define "main" }}
 {{ range page.Sections }}
-    <div class="card-section">
-        <p>blog section {{ .LinkTitle }}</p>
-        <ul>
+<section class="card-topic">
+    <h2>Section: {{ .LinkTitle }}</h2>
+    <div class="card-container">
         {{ range .RegularPages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>    
+        <div class="card">
+            <h3>{{ .Title }}</h3>
+            <small>{{ .Date }}</small>
+            <div class="card-extra">
+                Summary ... 
+                <a href="{{ .RelPermalink }}">Read More</a>
+            </div>
+        </div>
         {{ end }}
-        </ul>
     </div>
+</section>
 {{ end }}
 
-<div class="card-section">
-    <p>All</p>
-    <ul>
-    {{ range .RegularPagesRecursive }}
-        <li>{{ .Title }}</li>    
-    {{ end }}
-    </ul>
-</div>
+<section class="card-topic">
+    <h2>Section: All</h2>
+    <div class="card-container">
+        {{ range .RegularPagesRecursive }}
+        <div class="card">
+            <h3>{{ .Title }}</h3>
+            <small>{{ .Date }}</small>
+            <div class="card-extra">
+                Summary ... 
+                <a href="{{ .RelPermalink }}">Read More</a>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
 
 {{ end }}
