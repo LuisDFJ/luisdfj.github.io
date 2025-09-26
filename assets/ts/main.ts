@@ -23,11 +23,11 @@ if( toggle_theme_button && toggle_theme && body ){
         toggle_theme_button.classList.toggle( 'active' )
         if( 'fa-moon' == toggle_theme.classList[1] ){
             toggle_theme.classList.remove( 'fa-moon' )
-            toggle_theme.classList.add( 'fa-sun' )
+            toggle_theme.classList.add( 'fa-circle' )
             body.classList.remove( 'dark' )
             body.classList.add( 'light' )
         } else {
-            toggle_theme.classList.remove( 'fa-sun' )
+            toggle_theme.classList.remove( 'fa-circle' )
             toggle_theme.classList.add( 'fa-moon' )
             body.classList.remove( 'light' )
             body.classList.add( 'dark' )

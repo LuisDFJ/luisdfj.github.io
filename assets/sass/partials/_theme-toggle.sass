@@ -1,7 +1,15 @@
+$toggle-color: var(--toggle-color)
+$toggle-backg: var(--toggle-background)
+$toggle-circ : var(--toggle-circ)
+
 .toggle-button
+  position: absolute
+  top: 2rem
+  right: 2rem
   width: 50px
   height: 25px
-  background: #ccc
+  background: $toggle-backg
+  color: $toggle-color
   border-radius: 25px
   display: flex
   align-items: center
@@ -11,7 +19,7 @@
   i
     width: 20px
     height: 20px
-    background: white
+    background: $toggle-circ
     border-radius: 50%
     display: flex
     align-items: center
@@ -19,6 +27,5 @@
     font-size: 14px
 
 .toggle-button.active
-  background: #333
   i
     transform: translateX(25px)
